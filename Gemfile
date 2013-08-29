@@ -7,6 +7,7 @@ gem 'pg'
 gem 'rails_12factor'
 gem 'rspec-rails'
 gem 'bootstrap-sass'
+gem 'bcrypt-ruby', '3.0.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
