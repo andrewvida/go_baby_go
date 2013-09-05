@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
      parent = Parent.find_by(email: params[:session][:email].downcase)
     if parent && parent.authenticate(params[:session][:password])
       sign_in parent
-      redirect_to parent
+      redirect_back_or parent
     else
       flash.now[:error] = 'Invalid email/password combination'
       render 'new'
