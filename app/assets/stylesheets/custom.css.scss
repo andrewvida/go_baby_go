@@ -1,13 +1,41 @@
 @import "bootstrap";
 
-/* mixins, variables, etc. */
+
+/* custom colors */
 
 $grayMediumLight: #eaeaea;
+$darkGrayBlue: #A2BDCE;
+$babyBlue: #BEDCE7;
+$white: #fff;
+$gray: #C8C5C0;
+$brownBlack: #624F53;
+
+/* mixins, variables, etc. */
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+/* bootstrap customizations */
+
+.navbar-wrapper, .navbar {
+  background: $darkGrayBlue
+}
+
+.navbar-toggle {
+  border-color: $brownBlack;
+
+  .icon-bar {
+    background-color: #fff;
+  }
+}
+
+
+footer {
+  height: 60px;
+  background: $brownBlack;
 }
 
 /* forms */
