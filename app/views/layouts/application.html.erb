@@ -10,6 +10,7 @@
 
 <body style>
   <nav class="navbar navbar-static-top" role="navigation">
+    <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="icon-bar"></span>
@@ -40,20 +41,22 @@
           <% end %>
         </ul>
       </div>
+    </div>
   </nav>
 
-  <div class="container">
-    <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
-    <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
-  </div>
-
+  <% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+  <%= yield %>
   <footer>
     <div class="container">
-      <p class="text-muted credit">Put some footer text here.</p>
+      <p class="text-muted credit">&copy 2012 | Vidality </p>
     </div>
   </footer>
+  <% if Rails.env.development? %>
+  <div class="container">
+    <%= debug(params) %>
+  </div>
+  <% end %>
 </body>
 </html>

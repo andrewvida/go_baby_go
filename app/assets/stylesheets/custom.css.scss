@@ -19,6 +19,10 @@ $brownBlack: #624F53;
 }
 
 /* bootstrap customizations */
+.navbar {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
 
 .navbar-wrapper, .navbar {
   background: $darkGrayBlue
@@ -32,6 +36,17 @@ $brownBlack: #624F53;
   }
 }
 
+#introduction {
+  .container {
+    text-align: center;
+    color: $brownBlack;
+  }
+  background-color: $babyBlue;
+}
+
+#next {
+  color: $gray;
+}
 
 footer {
   height: 60px;
