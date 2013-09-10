@@ -18,7 +18,7 @@ $brownBlack: #624F53;
   box-sizing: border-box;
 }
 
-/* bootstrap customizations */
+/* navbar customizations */
 .navbar {
   margin-top: 10px;
   margin-bottom: 0px;
@@ -36,21 +36,12 @@ $brownBlack: #624F53;
   }
 }
 
-#introduction {
-  .container {
-    text-align: center;
-    color: $brownBlack;
-  }
-  background-color: $babyBlue;
-}
-
-#next {
-  color: $gray;
-}
+/* footer customizations */
 
 footer {
   height: 60px;
-  background: $brownBlack;
+  background: $gray;
+  padding: 50px 0;
 }
 
 /* forms */
