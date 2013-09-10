@@ -1,62 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>GoBabyGo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
+  <head>
+    <title>GoBabyGo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<body style>
-  <nav class="navbar navbar-static-top" role="navigation">
+  <body style>
+    <%= render 'shared/navigation' %>
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+    <% if Rails.env.development? %>
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to "Go Baby Go", root_path, id: "logo", class: "navbar-brand" %>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><%= link_to "ABOUT", '#' %></li>
-          <% if signed_in? %>
-          <li><%= link_to "Users", '#' %></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_parent %></li>
-              <li><%= link_to "Settings", edit_parent_path(current_parent) %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to "Sign out", signout_path, method: "delete" %>
-              </li>
-            </ul>
-          </li>
-          <% else %>
-          <li><%= link_to "LOG IN", signin_path %></li>
-          <li><%= link_to "SIGN UP", signup_path %></li>
-          <% end %>
-        </ul>
-      </div>
+      <%= debug(params) %>
     </div>
-  </nav>
-
-  <% flash.each do |key, value| %>
-  <div class="alert alert-<%= key %>"><%= value %></div>
-  <% end %>
-  <%= yield %>
-  <footer>
-    <div class="container">
-      <p class="text-muted credit">&copy 2012 | Vidality </p>
-    </div>
-  </footer>
-  <% if Rails.env.development? %>
-  <div class="container">
-    <%= debug(params) %>
-  </div>
-  <% end %>
-</body>
+    <% end %>
+  </body>
 </html>
