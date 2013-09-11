@@ -12,13 +12,14 @@
     text-align: center;
     color: $brownBlack;
 
-    a {
+    a, h4{
       margin-bottom: 30px;
     }
+
   }
 }
 
-#features {
+#features, #why {
   color: $brownBlack;
 
   .container {
@@ -33,3 +34,5 @@
 .feature-divider {
   margin: 80px 0;
 }
+
+.col { font-size: 22px; }

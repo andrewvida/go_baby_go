@@ -4,6 +4,8 @@ GoBabyGo::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   resources :parents
   resources :sessions, only: [:new, :create, :destroy]
+
+  get 'about', to: 'home#about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
