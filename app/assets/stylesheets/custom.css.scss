@@ -11,6 +11,10 @@ $gray: #C8C5C0;
 $brownBlack: #624F53;
 
 /* mixins, variables, etc. */
+div {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -22,6 +26,22 @@ $brownBlack: #624F53;
 .navbar {
   margin-top: 10px;
   margin-bottom: 0px;
+
+  .nav {
+    .sep{
+      border-left: 1px solid #ddd;
+      width: 1px;
+      margin: 14px 20px;
+      height: 16px;
+    }
+
+  }
+
+  a { color: $white }
+}
+
+.navbar-brand {
+  font-size: 30px;
 }
 
 .navbar-wrapper, .navbar {
