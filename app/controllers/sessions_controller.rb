@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    render layout: "no_header_footer"
   end
 
   def create

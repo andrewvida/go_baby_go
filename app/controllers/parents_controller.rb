@@ -4,6 +4,7 @@ class ParentsController < ApplicationController
 
   def new
     @parent = Parent.new
+    render layout: "no_header_footer"
   end
 
   def show

@@ -9,14 +9,12 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   </head>
 
-  <body style>
-    <%= render 'shared/navigation' %>
+  <body id="no-header-footer" style>
     <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
     <% end %>
     <%= yield %>
-    <%= render 'shared/footer' %>
-    <% if Rails.env.development? %>
+    <% if Rails.env.test? %>
     <div class="container">
       <%= debug(params) %>
     </div>
