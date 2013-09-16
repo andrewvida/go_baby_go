@@ -1,4 +1,6 @@
 class Parent < ActiveRecord::Base
+  has_many :kids
+
   before_save { self.email = email.downcase }
   before_create :create_remember_token
 
@@ -10,6 +12,7 @@ class Parent < ActiveRecord::Base
 
   has_secure_password
   validates :password, length: { minimum: 6 }
+
 
   def Parent.new_remember_token
     SecureRandom.urlsafe_base64

@@ -1,0 +1,6 @@
+<div class="container">
+  <%= form_for(@kid) do |f| %>
+    <%= f.text_field :name, class: "form-control", placeholder: "baby name" %>
+    <%= f.submit "Deliver my baby", class: "btn btn-large btn-primary" %>
+  <% end %>
+</div>
