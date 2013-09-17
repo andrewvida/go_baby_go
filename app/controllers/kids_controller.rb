@@ -14,10 +14,15 @@ class KidsController < ApplicationController
     end
   end
 
+  def show
+    @kid = Kid.find(params[:id])
+  end
+
   private
 
   def kids_params
-    params.require(:kid).permit(:name)
+    params.require(:kid).permit(:name,
+      :birthdate, :birthplace, :weight, :height)
   end
 
 end
