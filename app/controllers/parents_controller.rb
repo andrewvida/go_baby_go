@@ -49,7 +49,7 @@ class ParentsController < ApplicationController
     end
   end
 
-  def correct_user
+  def correct_parent
     @parent = Parent.find(params[:id])
     redirect_to(root_url) unless current_parent?(@parent)
   end
