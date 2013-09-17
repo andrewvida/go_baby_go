@@ -10,6 +10,23 @@ $white: #fff;
 $gray: #C8C5C0;
 $brownBlack: #624F53;
 
+html, body {
+  height: 100%
+  // The html and body elements cannot
+  // have any padding or margin (for sticky footer).
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  // Negative indent footer by its height
+  margin: 0 auto -150px;
+  // Pad bottom by footer height
+  padding: 0 0 150px;
+}
+
 /* mixins, variables, etc. */
 div {
   font-family: 'Montserrat', sans-serif;
@@ -49,7 +66,7 @@ div {
 /* footer customizations */
 
 footer {
-  height: 60px;
+  height: 150px;
   background: $gray;
   padding: 50px 0;
 }
