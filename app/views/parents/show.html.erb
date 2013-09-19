@@ -1,1 +1,5 @@
-<%= @parent.name %>, <%= @parent.email %>
+<div class="container">
+  <h2>Hello, <%= @parent.name %>!</h2>
+  <p>Please choose an option:</p>
+  <%= link_to "Having a new child?", new_kid_path %>
+</div>
