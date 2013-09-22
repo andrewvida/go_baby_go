@@ -4,9 +4,10 @@ GoBabyGo::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   resources :sessions, only: [:new, :create, :destroy]
   resources :parents do
-    resources :kids, shallow: true do
-      resources :firsts, shallow: true
-    end
+    resources :kids, shallow: true
+  end
+  resources :kids do
+    resources :firsts, shallow: true
   end
 
   get 'about', to: 'home#about'
