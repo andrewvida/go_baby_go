@@ -25,6 +25,6 @@ class Parent < ActiveRecord::Base
   private
 
     def create_remember_token
-      self.remember_token = Parent.encrypt(User.new_remember_token)
+      self.remember_token = Parent.encrypt(Parent.new_remember_token)
     end
 end
