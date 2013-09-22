@@ -1,6 +1,8 @@
 <div class="container">
   <h2>Hello, <%= @parent.name %>!</h2>
   <p>Please choose an option:</p>
-  <p><%= link_to "Having a new child?", new_kid_path %> </p>
+  <p><%= link_to "Having a new child?", new_parent_kid_path(parent_id: @parent.id) %> </p>
+  <% if @parent.kids.length > 0 %>
   <p><%= link_to "Take me to my kids!", parent_kids_path(parent_id: @parent.id) %></p>
+  <% end %>
 </div>
