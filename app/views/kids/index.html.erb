@@ -1,3 +1,14 @@
-<% @kids.each do |kid| %>
-  <h1><%= kid.name %></h1>
-<% end %>
+<header id="introduction">
+  <div class="container">
+    <h1>My Kids!</h1>
+    <h4>Select one of your bundles of joy!</h4>
+  </div>
+</header>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <% @kids.each do |kid| %>
+    <h1><%= kid.name %></h1>
+    <% end %>
+  </div>
+</div>
