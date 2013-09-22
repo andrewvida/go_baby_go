@@ -20,10 +20,5 @@
     <%= yield %>
     </div>
     <%= render 'shared/footer' %>
-    <% if Rails.env.development? %>
-    <div class="container">
-      <%= debug(params) %>
-    </div>
-    <% end %>
   </body>
 </html>
