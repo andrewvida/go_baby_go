@@ -1,4 +1,8 @@
 class KidsController < ApplicationController
+  def index
+    @kids = Kid.where("parent_id = ?", params["parent_id"])
+  end
+
   def new
     @kid = Kid.new
   end
