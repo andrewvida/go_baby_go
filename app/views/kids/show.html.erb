@@ -1,1 +1,16 @@
-<h1><%= @kid.name %></h1>
+<header id="introduction">
+  <div class="container">
+    <h1><%= @kid.name %> </h1>
+  </div>
+</header>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p>Birthday:<%= @kid.birthdate %></p>
+    <p>Birthplace: <%= @kid.birthplace %> </p>
+    <p>Birth weight: <%= @kid.weight %> </p>
+    <p>Birth height: <%= @kid.height %> </p>
+    <p> <%= button_to "Add a first", new_kid_first_path(kid_id: @kid.id), class: "btn btn-large btn-primary" %></p>
+  </div>
+</div>
+

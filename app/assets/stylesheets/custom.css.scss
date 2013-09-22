@@ -16,6 +16,10 @@ html, body {
   // have any padding or margin (for sticky footer).
 }
 
+a {
+  color: orange;
+}
+
 /* Wrapper for page content to push down footer */
 #wrap {
   min-height: 100%;
@@ -98,12 +102,8 @@ input {
   @extend .error;
 }
 
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
+header {
+  .container {
+    min-height: 100px;
+  }
 }
