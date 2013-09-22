@@ -2,9 +2,12 @@ GoBabyGo::Application.routes.draw do
   match '/signup', to: 'parents#new', via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
-  resources :parents
   resources :sessions, only: [:new, :create, :destroy]
-  resources :kids
+  resources :parents do
+    resources :kids, shallow: true do
+      resources :firsts, shallow: true
+    end
+  end
 
   get 'about', to: 'home#about'
   # The priority is based upon order of creation: first created -> highest priority.
