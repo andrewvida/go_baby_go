@@ -1,14 +1,19 @@
 <header id="introduction">
   <div class="container">
-    <h1>My Kids!</h1>
-    <h4>Select one of your bundles of joy!</h4>
-  </div>
+    <div class="col col-md-6 col-md-offset-3">
+      <h1>My Kids!</h1>
+      <h4>Record new things your child has done, or make changes to them. </h4>
+    </div>
+</div>
 </header>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <% @kids.each do |kid| %>
-    <h1><%= kid.name %></h1>
-    <% end %>
+  <div id="kids-list" class="col-md-6 col-md-offset-3">
+    <ul> Please select a child:
+      <% @kids.each do |kid| %>
+      <li><%= link_to(kid.name, kid_path(id: kid.id)) %></li>
+      <% end %>
+    </ul>
+    <h5>(Note: Go Baby Go! cannot make any <em>real</em> changes to your kids though!)</h5>
   </div>
 </div>
