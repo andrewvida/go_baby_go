@@ -10,7 +10,7 @@
     <p>Birthplace: <%= @kid.birthplace %> </p>
     <p>Birth weight: <%= @kid.weight %> </p>
     <p>Birth height: <%= @kid.height %> </p>
-    <p> <%= button_to "Add a first", new_kid_first_path(kid_id: @kid.id), class: "btn btn-large btn-primary" %></p>
+    <p> <%= button_to "Add a first", new_kid_first_path(kid_id: @kid.id), method: :get, class: "btn btn-large btn-primary" %></p>
   </div>
 </div>
 
