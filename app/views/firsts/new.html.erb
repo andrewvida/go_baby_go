@@ -1,0 +1,17 @@
+<header id="introduction">
+  <div class="container">
+    <h1>Go Baby, Go!</h1>
+    <h4>Enter information about what just happened.</h4>
+  </div>
+</header>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for([@kid, @first]) do |f| %>
+    <%= f.text_field :description, class: "form-control", placeholder: "First description" %>
+    <%= f.text_field :occurred_at, class: "form-control", placeholder: "Date Occurred" %>
+    <p>
+      <%= f.submit "Add", class: "btn btn-large btn-primary" %>
+    </p>
+    <% end %>
+  </div>
+</div>

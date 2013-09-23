@@ -1,0 +1,17 @@
+<header id="introduction">
+  <div class="container">
+    <div class="col col-md-6 col-md-offset-3">
+      <h1>Firsts for: <%= @kid.name %></h1>
+    </div>
+</div>
+</header>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <ul> Please select a first:
+      <% @firsts.each do |first| %>
+      <li><%= link_to(first.description, first_path(id: first.id)) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
