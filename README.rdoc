@@ -1,3 +1,5 @@
+ ![Codeship Status for andrewvida/go_baby_go](https://codeship.io/projects/b8ee6ad0-2576-0132-13af-2ac3e15a4c5d/status)](https://codeship.io/projects/37176)
+
 == README
 
 This README would normally document whatever steps are necessary to get the
